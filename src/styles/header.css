@@ -1,0 +1,176 @@
+/* 🔹 Título del header */
+.header-title-container h1 {
+  background-image: url("../../public/assets/fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center; /* centra en horizontal */
+  align-items: center;     /* centra en vertical */
+  margin: 0;
+  font-size: 100px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  -webkit-text-stroke: 5px white;
+  text-align: center;
+  color: #0057b7;
+}
+
+/* 🔹 Menú de navegación */
+.ul-container {
+  display: flex;
+  font-size: 20px;
+  gap: 50px;
+  list-style: none;
+  background: rgb(0, 87, 183);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* sombra externa */
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+  font-family: fantasy;
+}
+
+.ul-container li a {
+  color: white;              /* texto en blanco */
+  text-decoration: none;     /* quita el subrayado */
+  transition: color 0.3s ease;
+}
+
+.ul-container li a:hover {
+  color: #ffd700;            /* amarillo al pasar el mouse */
+}
+
+/* Contador encima del ícono */
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;   /* 🔹 ajusta la altura sobre el ícono */
+  right: -10px; /* 🔹 se mueve hacia la esquina */
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Menú del carrito */
+.cart-menu {
+  position: absolute;
+  top: 100px; /* debajo del header */
+  right: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  width: 300px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.cart-menu h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #003366;
+}
+
+.cart-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.cart-menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.cart-menu li img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+
+/* 📱 Responsive para móviles (vertical: 360px ancho) */
+@media (max-width: 480px) {
+  .header-title-container h1 {
+    font-size: 40px; /* título más pequeño */
+    height: 120px;
+    -webkit-text-stroke: 2px white;
+  }
+
+  .ul-container {
+    flex-direction: column; /* menú en vertical */
+    gap: 15px;
+    height: auto;
+    padding: 15px 0;
+    font-size: 16px;
+  }
+}
+
+/* 🔹 Botón del carrito de compras */
+.shoppingCar {
+  position: relative;  /* 🔹 hace que los hijos absolutos se posicionen sobre este botón */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background 0.4s ease-out;
+}
+
+/* Hover */
+.shoppingCar:hover {
+  transform: scale(1.5);         /* un poco más grande */
+}
+
+/* Responsive: en móviles se ajusta */
+@media (max-width: 480px) {
+  .shoppingCar {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 0;
+  }
+}
+
+
+/* 📱 Responsive para móviles en horizontal (landscape) */
+@media (max-height: 480px) and (orientation: landscape) {
+  .header-title-container h1 {
+    font-size: 50px;
+    height: 100px;
+    -webkit-text-stroke: 2px white;
+  }
+
+  .ul-container {
+    gap: 20px;
+    font-size: 16px;
+    height: 70px;
+  }
+}
+
+/* 💻 Responsive para tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-title-container h1 {
+    font-size: 70px;
+    height: 150px;
+    -webkit-text-stroke: 3px white;
+  }
+
+  .ul-container {
+    gap: 30px;
+    font-size: 18px;
+    height: 80px;
+  }
+}

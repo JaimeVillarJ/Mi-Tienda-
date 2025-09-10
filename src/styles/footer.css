@@ -1,0 +1,40 @@
+/* 🔹 FOOTER SUPERMERCADO */
+.super-footer {
+  background-color: #003366; /* azul oscuro */
+  color: #fff;               /* texto blanco */
+  padding: 40px 20px 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+  color: #FFD700; /* amarillo */
+  margin-bottom: 10px;
+}
+
+.footer-section p, 
+.footer-section a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #FFD700;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+  font-size: 13px;
+  color: #ddd;
+}

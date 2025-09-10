@@ -1,0 +1,83 @@
+/* 🔹 Contenedor general */
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* 🔹 Tarjeta de noticia */
+.news-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto hover */
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 20px rgba(0,0,0,0.3);
+}
+
+/* 🔹 Imagen */
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 🔹 Texto */
+.news-card p {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  line-height: 1.5em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 📱 Responsivo para tablets */
+@media (max-width: 1024px) {
+  .news-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .news-card img {
+    height: 180px;
+  }
+
+  .news-card p {
+    font-size: 15px;
+  }
+}
+
+/* 📱 Responsivo para móviles (vertical y horizontal) */
+@media (max-width: 600px) {
+  .news-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .news-card {
+    border-radius: 10px;
+  }
+
+  .news-card img {
+    height: 160px;
+  }
+
+  .news-card p {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

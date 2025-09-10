@@ -1,0 +1,42 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app-container {
+  background: linear-gradient(to right, rgb(255, 221, 0), rgb(243, 243, 242));
+  min-height: 100vh;
+}
+
+/* 🔹 Título de la sección */
+.news-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #158ed4, #003366); /* amarillo → azul */
+  -webkit-text-fill-color: transparent; /* aplica degradado al texto */
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.4); /* sombra llamativa */
+  letter-spacing: 5px; /* separación entre letras */
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 30;
+  animation: shine 3s infinite linear; /* animación sutil */
+  -webkit-text-stroke: 2px white;
+}
+
+/* ✨ Animación de brillo en el texto */
+@keyframes shine {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

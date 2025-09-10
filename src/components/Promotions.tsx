@@ -14,8 +14,7 @@ export const Promotions = ({
   const API_LINK = import.meta.env.VITE_API_LINK;
 
   useEffect(() => {
-    axios
-      .get<products[]>(`${API_LINK}/api/products/promotions`)
+    axios.get<products[]>(`${API_LINK}/api/products/promotions`)
       .then((response) => {
         setProducts(response.data);
         setChargeProducts(false);

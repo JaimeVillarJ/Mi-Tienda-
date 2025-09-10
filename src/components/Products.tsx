@@ -10,8 +10,7 @@ export const Products = ({ addToCart }: { addToCart: (product: products) => void
   const API_LINK = import.meta.env.VITE_API_LINK;
 
   useEffect(() => {
-    axios
-      .get(`${API_LINK}/api/products`)
+    axios.get(`${API_LINK}/api/products`)
       .then((response) => {
         setProducts(response.data);
         setChargeProducts(false);

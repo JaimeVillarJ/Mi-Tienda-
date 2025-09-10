@@ -12,8 +12,7 @@ export const News = () => {
 
     const API_LINK = import.meta.env.VITE_API_LINK;
     useEffect(() => {
-        axios
-        .get(`${ API_LINK }/api/news`)
+        axios.get(`${ API_LINK }/api/news`)
         .then((response) => {
             setNews(response.data);
             setChargeNews(false);

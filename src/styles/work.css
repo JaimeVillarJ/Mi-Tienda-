@@ -78,3 +78,49 @@
   color: #003366;
   transform: scale(1.05);
 }
+
+/* 🔹 Media Queries para responsive */
+
+/* Móvil vertical (360px ancho) */
+@media (max-width: 360px) {
+  .join-title {
+    font-size: 32px;
+  }
+  .join-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .employee-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .join-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .join-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+/* Móvil horizontal / tablet pequeño (740px ancho) */
+@media (max-width: 740px) {
+  .join-title {
+    font-size: 40px;
+  }
+  .join-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .employee-card {
+    width: 45%;
+  }
+  .join-cards {
+    gap: 20px;
+  }
+  .join-button {
+    padding: 14px 35px;
+    font-size: 17px;
+  }
+}

@@ -8,7 +8,7 @@ export const Promotions = () => {
     const [products, setProducts] = useState<products[]>([]);
     const [chargeProducts, setChargeProducts] = useState(true);
 
-    const API_LINK = import.meta.env.VITE_APP_API_LINK;
+    const API_LINK = import.meta.env.VITE_API_LINK;
     useEffect(() => {
         axios
         .get(`${ API_LINK }/api/products/promotions`)
